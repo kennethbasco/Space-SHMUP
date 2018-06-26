@@ -14,7 +14,16 @@ public class Enemy : MonoBehaviour {
 
     public int score = 100;      // Points earned for destroying this
 
+    private BoundsCheck bndCheck;                                            // a
 
+
+
+    void Awake()
+    {                                                           // b
+
+        bndCheck = GetComponent<BoundsCheck>();
+
+    }
 
     // This is a Property: A method that acts like a field
 
@@ -44,6 +53,16 @@ public class Enemy : MonoBehaviour {
     {
 
         Move();
+
+        if (bndCheck != null && bndCheck.offDown )
+        {                    // c
+
+            
+
+            Destroy(gameObject);
+
+        }
+
 
     }
 

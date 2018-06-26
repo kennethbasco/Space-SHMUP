@@ -19,6 +19,9 @@ public class BoundsCheck : MonoBehaviour {
 
     public float camHeight;
 
+    [HideInInspector]
+
+    public bool offRight, offLeft, offUp, offDown;
 
 
     void Awake()
@@ -39,12 +42,16 @@ public class BoundsCheck : MonoBehaviour {
 
         isOnScreen = true;
 
+        offRight = offLeft = offUp = offDown = false;
+
         if (pos.x > camWidth - radius)
         {
 
             pos.x = camWidth - radius;
 
             isOnScreen = false;
+
+            offRight = true;
 
         }
 
@@ -58,6 +65,10 @@ public class BoundsCheck : MonoBehaviour {
 
             isOnScreen = false;
 
+            offLeft = true;
+
+
+
         }
 
 
@@ -69,6 +80,8 @@ public class BoundsCheck : MonoBehaviour {
 
             isOnScreen = false;
 
+            offUp = true;
+
         }
 
         if (pos.y < -camHeight + radius)
@@ -78,7 +91,12 @@ public class BoundsCheck : MonoBehaviour {
 
             isOnScreen = false;
 
+            offDown = true;
+
         }
+
+
+        isOnScreen = !(offRight || offLeft || offUp || offDown);
 
         if (keepOnScreen && !isOnScreen)
         {                                // f
@@ -86,6 +104,8 @@ public class BoundsCheck : MonoBehaviour {
             transform.position = pos;                                       // g
 
             isOnScreen = true;
+
+            offRight = offLeft = offUp = offDown = false;
 
         }
 
