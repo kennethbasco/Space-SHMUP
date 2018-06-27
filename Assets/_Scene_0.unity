@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 23803573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cockpit
   m_TagString: Hero
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 256277634}
   - component: {fileID: 256277633}
   - component: {fileID: 256277632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wing
   m_TagString: Hero
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 801421789}
   - component: {fileID: 801421788}
   - component: {fileID: 801421787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Hero
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 1104644230}
   - component: {fileID: 1104644232}
   - component: {fileID: 1104644233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shield
   m_TagString: Hero
   m_Icon: {fileID: 0}
@@ -603,7 +603,7 @@ GameObject:
   - component: {fileID: 1649644981}
   - component: {fileID: 1649644982}
   - component: {fileID: 1649644983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: _Hero
   m_TagString: Hero
   m_Icon: {fileID: 0}
