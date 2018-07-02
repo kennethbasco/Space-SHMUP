@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour {
 
     public int score = 100;      // Points earned for destroying this
 
-    private BoundsCheck bndCheck;                                            // a
+    protected BoundsCheck bndCheck;                                            // a
 
 
 
@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour {
         else
         {
 
-            print("Enemy hit by non-ProjectileHero: " + otherGO.name);     // c
+            print("Enemy hit by non-ProjectileHero: " + otherGO.name );     // c
 
         }
 

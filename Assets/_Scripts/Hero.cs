@@ -35,6 +35,15 @@ public class Hero : MonoBehaviour
     private GameObject lastTriggerGo = null;
 
 
+    public delegate void WeaponFireDelegate();                               // a
+
+
+    // Create a WeaponFireDelegate field named fireDelegate.
+
+
+    public WeaponFireDelegate fireDelegate;
+
+
 
     void Awake()
     {
@@ -52,6 +61,9 @@ public class Hero : MonoBehaviour
             Debug.LogError("Hero.Awake() - Attempted to assign second Hero.S!");
 
         }
+
+        fireDelegate += TempFire;
+
 
     }
 
@@ -84,14 +96,25 @@ public class Hero : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {                           // a
+        // if (Input.GetKeyDown(KeyCode.Space))
+        //{                           // a
 
-            TempFire();
+        //  TempFire();
+
+        //}
+
+        if (Input.GetAxis("Jump") == 1 && fireDelegate != null)
+        {            // d
+
+
+            fireDelegate();                                                  // e
+
 
         }
 
+
     }
+
 
 
     void TempFire()
@@ -103,9 +126,23 @@ public class Hero : MonoBehaviour
 
         Rigidbody rigidB = projGO.GetComponent<Rigidbody>();
 
-        rigidB.velocity = Vector3.up * projectileSpeed;
+        //rigidB.velocity = Vector3.up * projectileSpeed;
 
-    }
+        Projectile proj = projGO.GetComponent<Projectile>();                 // h
+
+
+        proj.type = WeaponType.blaster;
+
+
+        float tSpeed = Main.GetWeaponDefinition(proj.type).velocity;
+
+
+        rigidB.velocity = Vector3.up * tSpeed;
+
+
+    
+
+}
 
     void OnTriggerEnter(Collider other)
     {
