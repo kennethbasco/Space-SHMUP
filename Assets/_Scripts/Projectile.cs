@@ -1,11 +1,20 @@
 ﻿using System.Collections;
+
+
 using System.Collections.Generic;
+
+
 using UnityEngine;
 
-public class Projectile : MonoBehaviour {
 
-    
+
+
+public class Projectile : MonoBehaviour
+{
+
+
     private BoundsCheck bndCheck;
+
 
     private Renderer rend;
 
@@ -57,24 +66,59 @@ public class Projectile : MonoBehaviour {
 
 
 
+
     void Awake()
     {
 
+
         bndCheck = GetComponent<BoundsCheck>();
+
+
+        rend = GetComponent<Renderer>();                                     // d
+
+
+        rigid = GetComponent<Rigidbody>();
+
 
     }
 
-    // Update is called once per frame
-    void Update () {
+
+
+
+
+    void Update()
+    {
+
 
         if (bndCheck.offUp)
-        {                                                // a
+        {
+
 
             Destroy(gameObject);
 
+
         }
 
+
     }
+
+
+
+
+    /// <summary>
+
+
+    /// Sets the _type private field and colors this projectile to match the
+
+
+    ///   WeaponDefinition.
+
+
+    /// </summary>
+
+
+    /// <param name="eType">The WeaponType to use.</param>
+
 
     public void SetType(WeaponType eType)
     {                               // e
@@ -93,4 +137,6 @@ public class Projectile : MonoBehaviour {
 
 
     }
+
+
 }
