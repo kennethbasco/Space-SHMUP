@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour {
 
     public float showDamageDuration = 0.1f; // # seconds to show damage // a
 
+    public float powerUpDropChance = 1f;  // Chance to drop a power-up  // a
+
 
 
     [Header("Set Dynamically: Enemy")]
@@ -151,6 +153,19 @@ public class Enemy : MonoBehaviour {
 
                 if (health <= 0)
                 {                                           // d
+
+                    if (!notifiedOfDestruction)
+                    {
+
+
+                        Main.S.ShipDestroyed(this);
+
+
+                    }
+
+
+                    notifiedOfDestruction = true;
+
 
                     // Destroy this Enemy
 
