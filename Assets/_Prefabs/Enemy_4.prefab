@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4250505597071692}
   - component: {fileID: 33040609068729480}
-  - component: {fileID: 135059067206262556}
   - component: {fileID: 23201469437833466}
+  - component: {fileID: 136668958745971672}
   m_Layer: 9
   m_Name: WingL
   m_TagString: Untagged
@@ -38,8 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4387090344925862}
   - component: {fileID: 33110550118323888}
-  - component: {fileID: 135929981547187004}
   - component: {fileID: 23983884515621620}
+  - component: {fileID: 136649228344175866}
   m_Layer: 9
   m_Name: WingR
   m_TagString: Untagged
@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 54790902782316068}
   - component: {fileID: 114202303367939526}
   - component: {fileID: 114006331280492312}
+  - component: {fileID: 114564634645369924}
   m_Layer: 9
   m_Name: Enemy_4
   m_TagString: Enemy
@@ -74,8 +75,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4408922492820810}
   - component: {fileID: 33943201535962956}
-  - component: {fileID: 135632079471081888}
   - component: {fileID: 23811069941392988}
+  - component: {fileID: 136379292842899720}
   m_Layer: 9
   m_Name: Fuselage
   m_TagString: Untagged
@@ -376,18 +377,36 @@ MonoBehaviour:
   fireRate: 0.3
   health: 10
   score: 100
---- !u!135 &135059067206262556
-SphereCollider:
+  showDamageDuration: 0.1
+  powerUpDropChance: 1
+  originalColors: []
+  materials: []
+  showingDamage: 0
+  damageDoneTime: 0
+  notifiedOfDestruction: 0
+--- !u!114 &114564634645369924
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1077711509754272}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 1230713505892378}
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6122e460f595bb4b9901eebed9870be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+  showDamageDuration: 0.1
+  powerUpDropChance: 1
+  originalColors: []
+  materials: []
+  showingDamage: 0
+  damageDoneTime: 0
+  notifiedOfDestruction: 0
+  parts: []
 --- !u!135 &135506284916857230
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -400,8 +419,8 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135632079471081888
-SphereCollider:
+--- !u!136 &136379292842899720
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -409,11 +428,12 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135929981547187004
-SphereCollider:
+--- !u!136 &136649228344175866
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -421,6 +441,20 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 1.0000002
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136668958745971672
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1077711509754272}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
