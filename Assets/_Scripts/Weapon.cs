@@ -79,7 +79,7 @@ public class WeaponDefinition
     public float continuousDamage = 0;      // Damage per second (Laser)
 
 
-    public float delayBetweenShots = 0;
+    public float delayBetweenShots = 0.2f;
 
 
     public float velocity = 20;             // Speed of projectiles

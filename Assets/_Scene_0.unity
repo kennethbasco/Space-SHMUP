@@ -1373,6 +1373,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &1332195748
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4394460075905594, guid: 4316096fcbad12b428424a0a3ddcb7ea, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394460075905594, guid: 4316096fcbad12b428424a0a3ddcb7ea, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394460075905594, guid: 4316096fcbad12b428424a0a3ddcb7ea, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394460075905594, guid: 4316096fcbad12b428424a0a3ddcb7ea, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394460075905594, guid: 4316096fcbad12b428424a0a3ddcb7ea, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394460075905594, guid: 4316096fcbad12b428424a0a3ddcb7ea, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394460075905594, guid: 4316096fcbad12b428424a0a3ddcb7ea, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394460075905594, guid: 4316096fcbad12b428424a0a3ddcb7ea, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4316096fcbad12b428424a0a3ddcb7ea, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1346912251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,29 +1630,29 @@ MonoBehaviour:
   weaponDefinitions:
   - type: 1
     letter: B
-    color: {r: 0.4705882, g: 0.4705882, b: 0.4705882, a: 0}
+    color: {r: 0.4705882, g: 0.4705882, b: 0.4705882, a: 1}
     projectilePrefab: {fileID: 1212698415124814, guid: 4316096fcbad12b428424a0a3ddcb7ea,
       type: 2}
-    projectileColor: {r: 1, g: 1, b: 1, a: 0}
+    projectileColor: {r: 1, g: 1, b: 1, a: 1}
     damageOnHit: 1
     continuousDamage: 0
     delayBetweenShots: 0.2
     velocity: 50
   - type: 2
     letter: S
-    color: {r: 0, g: 1, b: 1, a: 0}
+    color: {r: 0, g: 1, b: 1, a: 1}
     projectilePrefab: {fileID: 1212698415124814, guid: 4316096fcbad12b428424a0a3ddcb7ea,
       type: 2}
-    projectileColor: {r: 0, g: 1, b: 1, a: 0}
+    projectileColor: {r: 0, g: 1, b: 1, a: 1}
     damageOnHit: 1
     continuousDamage: 0
     delayBetweenShots: 0.4
     velocity: 50
   - type: 6
     letter: O
-    color: {r: 0, g: 0, b: 0, a: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
     projectilePrefab: {fileID: 0}
-    projectileColor: {r: 0, g: 0, b: 0, a: 0}
+    projectileColor: {r: 0, g: 0, b: 0, a: 1}
     damageOnHit: 0
     continuousDamage: 0
     delayBetweenShots: 0
@@ -1837,7 +1879,7 @@ Transform:
   m_LocalScale: {x: 160, y: 160, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1649644979
 GameObject:
